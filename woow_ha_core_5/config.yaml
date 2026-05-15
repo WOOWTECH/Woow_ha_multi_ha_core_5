@@ -1,7 +1,7 @@
-name: "Woow HA Core 4"
-description: "Woow Home Assistant Core instance 4"
+name: "Woow HA Core 5"
+description: "Woow Home Assistant Core instance 5"
 version: "1.0.1"
-slug: "woow_ha_core_4"
+slug: "woow_ha_core_5"
 init: false
 arch:
   - aarch64
@@ -10,6 +10,6 @@ arch:
   - armv7
   - i386
 ports:
-  8123/tcp: 8127
+  8123/tcp: 8128
 map:
   - "config:rw"
