@@ -3,10 +3,12 @@ FROM ${BUILD_FROM}
 
 # Download and apply WOOWTECH UI overlay
 ARG OVERLAY_VERSION=v1.0.0
+ARG OVERLAY_SHA256=d1e07dc45b9dacb2b63c43d66ab7b394e614d5bdbbad97cfe995df8e08b9bb96
 RUN apk add --no-cache curl \
  && curl -fsSL \
       "https://github.com/WOOWTECH/Woow_ha_multi_ha_core_1/releases/download/${OVERLAY_VERSION}-overlay/woowtech-overlay.tar.gz" \
       -o /tmp/overlay.tar.gz \
+ && echo "${OVERLAY_SHA256}  /tmp/overlay.tar.gz" | sha256sum -c \
  && rm -rf \
       /usr/src/homeassistant/homeassistant/components/analytics \
       /usr/src/homeassistant/homeassistant/components/homeassistant_alerts \
@@ -32,4 +34,4 @@ RUN apk add --no-cache curl \
  && rm -f /tmp/overlay.tar.gz \
  && apk del curl
 
-CMD mkdir -p /config/woow_ha_core_5 && python -m homeassistant --config /config/woow_ha_core_5
+CMD ["sh", "-c", "mkdir -p /config/woow_ha_core_5 && exec python -m homeassistant --config /config/woow_ha_core_5"]
