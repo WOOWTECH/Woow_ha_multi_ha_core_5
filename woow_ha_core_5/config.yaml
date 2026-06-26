@@ -1,6 +1,6 @@
 name: "Woow HA Core 5"
 description: "Woow Home Assistant Core instance 5"
-version: "1.1.0"
+version: "1.1.1"
 slug: "woow_ha_core_5"
 init: false
 arch:
