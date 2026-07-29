@@ -1,4 +1,9 @@
-# Woow HA Core 5
+> ⚠️ **Deprecated — this add-on has moved.**
+> All five Woow HA Core add-ons now live in a single repository:
+> **https://github.com/WOOWTECH/woowtech_ha_multi_ha_core**
+> In Home Assistant, add that repository URL instead. This repository is archived (read-only).
+
+---# Woow HA Core 5
 
 Home Assistant Core instance running inside HAOS as an add-on. Based on [jgoakley/hassio-addons](https://github.com/jgoakley/hassio-addons).
 
